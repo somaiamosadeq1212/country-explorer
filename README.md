@@ -57,14 +57,14 @@ https://restcountries.com
 ### Home
 ![Home](./screenshots/home.PNG)
 
-###  Shopping Cart
+###  About page
 ![About](./screenshots/about.PNG)
 
 ### Details
 ![Details](./screenshots/details.PNG)
 
 ### Countries
-![Countries](./screenshots/Countries.PNG)
+![Countries](./screenshots/countries.PNG)
 
 
 ### Search by title/name 
@@ -122,4 +122,4 @@ http://localhost:3000
 
 ## Author
 - Somaya Mosadiq
-- React Developer
+- React and Next.js Developer
