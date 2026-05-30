@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Country Explorer
+## Project Description
+Country Explorer is a modern web application built with Next.js that allows users to explore countries around the world, search for countries, and view detailed information about each country using real-time data from the REST Countries API.
 
-## Getting Started
+---
 
-First, run the development server:
+## Features
+- Next.js App Router
+- File-based Routing
+- Shared Layout
+- Dynamic Routes
+- Server Components
+- Client Components
+- Real API Data Fetching
+- Static Rendering & Caching
+- Search Functionality
+- Country Details Page
+- Responsive Design
+- Dark Mode Support
+- Google Maps Integration
+
+---
+
+## Country Information
+Users can view:
+
+- Country Name
+- Flag
+- Capital
+- Population
+- Region
+- Languages
+- Currency
+- Time Zones
+- Google Maps Link
+
+---
+
+## Technologies Used
+- Next.js
+- React
+- Tailwind CSS
+- JavaScript
+- REST Countries API
+
+---
+
+# API Used
+REST Countries API
+
+https://restcountries.com
+
+---
+
+## Screenshots
+
+### Home
+![Home](./screenshots/home.PNG)
+
+###  Shopping Cart
+![About](./screenshots/about.PNG)
+
+### Details
+![Details](./screenshots/details.PNG)
+
+### Countries
+![Countries](./screenshots/Countries.PNG)
+
+
+### Search by title/name 
+![Search](./screenshots/search.PNG)
+
+### Map view
+![Map](./screenshots/map.PNG)
+
+---
+
+## Project Structure
+
+```bash
+
+ country-explorer/
+ ├── app/
+ ├── components/
+ ├── public/
+ ├── screenshots/
+ ├── README.md/
+```
+---
+
+## GitHub Repository
+
+[View Repository](https://github.com/somaiamosadeq1212/country-explorer)
+
+---
+
+## Installation & Running
+
+### Navigate into the project folder:
+
+``` bash
+cd product-store
+```
+
+### Install dependencies:
+
+```bash
+npm install
+```
+
+### Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Open the app in your browser:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+- Somaya Mosadiq
+- React Developer
