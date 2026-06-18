@@ -1,58 +1,132 @@
-// use "use client" because it is a client component
+// "use client";
+
+// import { useState } from "react";
+
+// export default function CountrySearch({
+//   search,
+//   updateParam,
+// }) {
+//   const [focused, setFocused] = useState(false);
+
+//   const clearSearch = () => {
+//     updateParam("search", "");
+//   };
+
+//   return (
+//     <div className="relative flex-1">
+      
+//       <input
+//         type="text"
+//         placeholder="Search countries..."
+//         value={search}
+//         onChange={(e) =>
+//           updateParam("search", e.target.value)
+//         }
+//         onFocus={() => setFocused(true)}
+//         onBlur={() => setFocused(false)}
+//         className="
+//           w-full
+//           border
+//           rounded-lg
+//           p-3
+//           pr-10
+//           shadow-sm
+//           bg-white
+//           text-gray-900
+//           placeholder:text-gray-500
+//           dark:bg-gray-700
+//           dark:text-white
+//           dark:placeholder:text-gray-400
+//           dark:border-gray-600
+//           focus:outline-none
+//           focus:ring-2
+//           focus:ring-blue-500
+//         "
+//       />
+
+//       {/* Clear button */}
+//       {search && (
+//         <button
+//           onClick={clearSearch}
+//           className="
+//             absolute
+//             right-3
+//             top-1/2
+//             -translate-y-1/2
+//             text-gray-400
+//             hover:text-red-500
+//             text-lg
+//             transition
+//           "
+//         >
+//           ✕
+//         </button>
+//       )}
+//     </div>
+//   );
+// }
+
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 
-export default function CountrySearch() {
-  const [countries, setCountries] = useState([]);
-  const [search, setSearch] = useState("");
+export default function CountrySearch({
+  search,
+  updateParam,
+}) {
+  const [value, setValue] = useState(search);
 
   useEffect(() => {
-    async function fetchCountries() {
-      const res = await fetch(
-        "https://restcountries.com/v3.1/all?fields=name,cca3"
-      );
+    setValue(search);
+  }, [search]);
 
-      const data = await res.json();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (value !== search) {
+        updateParam("search", value);
+      }
+    }, 500);
 
-      setCountries(data);
-    }
+    return () => clearTimeout(timer);
+  }, [value, search, updateParam]);
 
-    fetchCountries();
-  }, []);
-
-  const filteredCountries = countries.filter((country) =>
-    country.name.common
-      .toLowerCase()
-      .includes(search.toLowerCase())
-  );
+  const clearSearch = () => {
+    setValue("");
+    updateParam("search", "");
+  };
 
   return (
-    <div>
+    <div className="relative flex-1">
       <input
         type="text"
-        placeholder="Search for a country..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full border p-3 rounded-lg mb-6"
+        placeholder="Search countries..."
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        className="
+          w-full
+          border
+          rounded-lg
+          p-3
+          pr-10
+          shadow-sm
+        "
       />
 
-      <div className="space-y-3">
-        {filteredCountries.map((country) => (
-          <div
-            key={country.cca3}
-            className="bg-white p-4 rounded-lg shadow"
-          >
-            <Link
-              href={`/countries/${country.cca3}`}
-              className="text-blue-600 hover:underline"
-            >
-              {country.name.common}
-            </Link>
-          </div>
-        ))}
-      </div>
+      {value && (
+        <button
+          onClick={clearSearch}
+          className="
+            absolute
+            right-3
+            top-1/2
+            -translate-y-1/2
+            text-gray-400
+            hover:text-red-500
+          "
+        >
+          ✕
+        </button>
+      )}
     </div>
   );
 }

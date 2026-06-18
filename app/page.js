@@ -1,35 +1,164 @@
+
+
+// import Link from "next/link";
+
+
+
+// export default function HomePage() {
+//   return (
+//     <main
+//       className="
+//         relative
+//     min-h-screen
+//     -mt-20
+//     flex
+//     items-center
+//     justify-center
+//     bg-cover
+//     bg-center
+//       "
+//       style={{
+//         backgroundImage:
+//           "url('images/world-bg.jpg')",
+//       }}
+//     >
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-black/60" />
+
+//       {/* Content */}
+//       <div className="relative z-10 text-center max-w-4xl px-6">
+//         <div
+//           className="
+//             inline-block
+//             mb-6
+//             px-5
+//             py-2
+//             rounded-full
+//             bg-white/10
+//             backdrop-blur-md
+//             border
+//             border-white/20
+//             text-white
+//           "
+//         >
+//           🌎 Explore Every Country
+//         </div>
+
+//         <h1
+//           className="
+//             text-6xl
+//             md:text-8xl
+//             font-extrabold
+//             text-white
+//             mb-6
+//           "
+//         >
+//           World Explorer
+//         </h1>
+
+//         <p
+//           className="
+//             text-xl
+//             md:text-2xl
+//             text-gray-200
+//             leading-relaxed
+//             mb-10
+//           "
+//         >
+//           Discover countries, flags, capitals,
+//           populations, currencies and cultures
+//           from around the world.
+//         </p>
+
+//         <div className="flex justify-center gap-5 flex-wrap">
+//           <Link
+//             href="/countries"
+//             className="
+//               bg-blue-600
+//               hover:bg-blue-700
+//               text-white
+//               px-8
+//               py-4
+//               rounded-2xl
+//               font-semibold
+//               shadow-xl
+//               hover:scale-105
+//               transition
+//             "
+//           >
+//             Explore Countries
+//           </Link>
+
+//           <Link
+//             href="/countries"
+//             className="
+//               bg-white/10
+//               backdrop-blur-md
+//               border
+//               border-white/20
+//               text-white
+//               px-8
+//               py-4
+//               rounded-2xl
+//               hover:bg-white/20
+//               transition
+//             "
+//           >
+//             Search Countries
+//           </Link>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
+
+
 import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-950 dark:to-black text-gray-900 dark:text-white transition-colors duration-500">
-      <div className="text-center max-w-3xl px-6">
-        <div className="inline-block mb-6 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 shadow backdrop-blur">
-          🌍 Discover the World
+    <main
+      className="
+        relative
+        min-h-screen
+        flex
+        items-center
+        justify-center
+        bg-cover
+        bg-center
+      "
+      style={{
+        backgroundImage: "url('/images/world-bg.jpg')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-4xl px-6">
+        <div className="inline-block mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white">
+          🌎 Explore Every Country
         </div>
 
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
+        <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-6">
           World Explorer
         </h1>
 
-        <p className="text-xl leading-8 mb-10 text-gray-700 dark:text-gray-300">
-          Explore countries around the world and
-          learn about their flags, capitals,
-          populations, currencies, languages,
-          and much more.
+        <p className="text-xl md:text-2xl text-gray-200 mb-10">
+          Discover countries, flags, capitals, populations and cultures from around the world.
         </p>
 
-        <div className="flex justify-center gap-4 flex-wrap">
+        <div className="flex justify-center gap-5 flex-wrap">
           <Link
             href="/countries"
-            className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-blue-700 hover:scale-105 transition duration-300 shadow-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl transition"
           >
             Explore Countries
           </Link>
 
           <Link
-            href="/search"
-            className="bg-white/80 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-8 py-4 rounded-2xl hover:bg-white dark:hover:bg-gray-700 transition duration-300 shadow-lg"
+            href="/countries"
+            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl hover:bg-white/20 transition"
           >
             Search Countries
           </Link>
@@ -38,3 +167,52 @@ export default function HomePage() {
     </main>
   );
 }
+
+
+// import Link from "next/link";
+// export default function HomePage() {
+//   return (
+//     <main
+//       className="
+//         relative
+//         min-h-screen
+//         flex
+//         items-center
+//         justify-center
+//         bg-cover
+//         bg-center
+//       "
+//       style={{
+//         backgroundImage: "url('/images/world-bg.jpg')",
+//       }}
+//     >
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-black/60" />
+
+//       {/* Content */}
+//       <div className="relative z-10 text-center max-w-4xl px-6">
+//         <div className="inline-block mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white">
+//           🌎 Explore Every Country
+//         </div>
+
+//         <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-6">
+//           World Explorer
+//         </h1>
+
+//         <p className="text-xl md:text-2xl text-gray-200 mb-10">
+//           Discover countries, flags, capitals, populations and cultures.
+//         </p>
+
+//         <div className="flex justify-center gap-5 flex-wrap">
+//           <Link className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl transition">
+//             Explore Countries
+//           </Link>
+
+//           <Link className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl hover:bg-white/20 transition">
+//             Search Countries
+//           </Link>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
